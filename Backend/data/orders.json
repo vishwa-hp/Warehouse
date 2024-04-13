@@ -1,0 +1,124 @@
+[
+    {
+      "orderId": "1",
+      "orderTotal": "$150",
+      "orderDate": "2024-04-12",
+      "shippingAddress": "123 Main St, Anytown, USA",
+      "customerName": "John Doe",
+      "customerEmail": "john.doe@example.com",
+      "lineItems": [
+        {
+          "lineItemId": "L001",
+          "productId": "P001",
+          "productName": "Client Gift Box",
+          "price": "$50"
+        }
+      ]
+    },
+    {
+      "orderId": "002",
+      "orderTotal": "$100",
+      "orderDate": "2024-04-10",
+      "shippingAddress": "2456 Elm St, Anytown, USA",
+      "customerName": "Jane Smith",
+      "customerEmail": "Jane Smith",
+      "lineItems": [
+        {
+          "lineItemId": "L002",
+          "productId": "P002",
+          "productName": "Valentines Box",
+          "price": "$65"
+        },
+        {
+          "lineItemId": "L003",
+          "productId": "P003",
+          "productName": "Birthday Card",
+          "price": "$30"
+        }
+      ]
+    },
+    {
+      "orderId": "2",
+      "orderTotal": "$150",
+      "orderDate": "2024-04-01",
+      "shippingAddress": "100 Dundas Street East",
+      "customerName": "John Smith",
+      "customerEmail": "johnsmith@email.com",
+      "lineItems": [
+        {
+          "lineItemId": "L001",
+          "productId": "P001",
+          "productName": "Valentines Box",
+          "price": "$75"
+        },
+        {
+          "lineItemId": "L002",
+          "productId": "P002",
+          "productName": "Birthday Box",
+          "price": "$50"
+        }
+      ]
+    },
+    {
+      "orderId": "3",
+      "orderTotal": "$75",
+      "orderDate": "2024-04-08",
+      "shippingAddress": "117 king Street East",
+      "customerName": "Jay Patel",
+      "customerEmail": "jaypatel@email.com",
+      "lineItems": [
+        {
+          "lineItemId": "L001",
+          "productId": "P001",
+          "productName": "Valentines Box",
+          "price": "$75"
+        }
+      ]
+    },
+    {
+      "orderId": "4",
+      "orderTotal": "$200",
+      "orderDate": "2024-04-10",
+      "shippingAddress": "210 Fallowfield Drive",
+      "customerName": "Jessica peter",
+      "customerEmail": "jessicap@email.com",
+      "lineItems": [
+        {
+          "lineItemId": "L002",
+          "productId": "P002",
+          "productName": "Birthday Box",
+          "price": "$50"
+        },
+        {
+          "lineItemId": "L003",
+          "productId": "P003",
+          "productName": "Client Gift Box",
+          "price": "$50"
+        },
+        {
+          "lineItemId": "L001",
+          "productId": "P001",
+          "productName": "Valentines Box",
+          "price": "$100"
+        }
+      ]
+    },
+    {
+      "orderId": "5",
+      "orderTotal": "$50",
+      "orderDate": "2024-03-26",
+      "shippingAddress": "100 King Street West",
+      "customerName": "Neil Smith",
+      "customerEmail": "Neilsm@email.com",
+      "lineItems": [
+        {
+          "lineItemId": "6",
+          "productId": "P002",
+          "productName": "Birthday Box",
+          "price": "$50"
+        }
+      ]
+    }
+    
+     
+  ]
