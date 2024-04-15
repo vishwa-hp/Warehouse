@@ -1,0 +1,62 @@
+[
+  {
+    "orderId": "1",
+    "orderDate": "2024-04-14",
+    "customerName": "John Doe",
+    "orderTotal": "$150",
+    "customerEmail": "John@email.com",
+    "shippingAddress": "123 Main St, City, Country",
+    "lineItems": [
+      {
+        "lineItemId": "L1",
+        "productId": "p1",
+        "productName": "Valentines Box",
+        "price": "$50"
+      },
+      {
+        "lineItemId": "L2",
+        "productId": "p2",
+        "productName": "Birthday Box",
+        "price": "$90"
+      }
+    ]
+  },
+  {
+    "orderId": "2",
+    "orderDate": "2024-04-15",
+    "customerName": "Jane Smith",
+    "orderTotal": "$200",
+    "shippingAddress": "456 Elm St, City, Country",
+    "lineItems": [
+      {
+        "lineItemId": "L3",
+        "productId": "p3",
+        "productName": "Client Gift Box",
+        "price": "$70"
+      }
+    ]
+  },
+  {
+    "orderId": "3",
+    "orderDate": "2024-04-16",
+    "orderTotal": "$250",
+    "customerName": "Alice Johnson",
+    "customerEmail": "alice@example.com",
+ 
+    "shippingAddress": "789 Oak St, City, Country",
+    "lineItems": [
+      {
+        "lineItemId": "L3",
+        "productId": "p3",
+        "productName": "Client Gift Box",
+        "price": "$120"
+      },
+      {
+        "lineItemId": "L2",
+        "productId": "p2",
+        "productName": "Birthday Box",
+        "price": "$80"
+      }
+    ]
+  }
+]
