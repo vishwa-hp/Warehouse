@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "./App.css";
 
 function App() {
   const [pickingList, setPickingList] = useState({});
@@ -9,7 +10,7 @@ function App() {
 
   const fetchPickingList = () => {
     setLoadingPickingList(true);
-    axios.get('/api/orders/picking-list')
+    axios.get('/api/get-picking-list')
       .then(response => {
         setPickingList(response.data);
         setLoadingPickingList(false);
@@ -17,12 +18,12 @@ function App() {
       .catch(error => {
         console.error('Error fetching picking list:', error);
         setLoadingPickingList(false);
-      });
+      }, []);
   };
 
   const fetchPackingList = () => {
     setLoadingPackingList(true);
-    axios.get('/api/orders/packing-list')
+    axios.get('/api/get-packing-list')
       .then(response => {
         setPackingList(response.data);
         setLoadingPackingList(false);
@@ -30,13 +31,13 @@ function App() {
       .catch(error => {
         console.error('Error fetching packing list:', error);
         setLoadingPackingList(false);
-      });
+      }, []);
   };
 
   return (
     <div>
       <h1>Warehouse Orders</h1>
-      <button onClick={fetchPickingList} disabled={loadingPickingList}>
+      <button style={{marginRight: "10px"}}onClick={fetchPickingList} disabled={loadingPickingList}>
         {loadingPickingList ? 'Loading Picking List...' : 'Fetch Picking List'}
       </button>
       <button onClick={fetchPackingList} disabled={loadingPackingList}>
@@ -44,9 +45,9 @@ function App() {
       </button>
 
       <h2>Picking List</h2>
-      <ul>
+      <ul className='pack'>
         {Object.entries(pickingList).map(([item, quantity]) => (
-          <li key={item}>
+          <li className='pack'key={item}>
             {item}: {quantity}
           </li>
         ))}
@@ -59,13 +60,13 @@ function App() {
           <p>Order Date: {order.orderDate}</p>
           <p>Customer Name: {order.customerName}</p>
           <p>Shipping Address: {order.shippingAddress}</p>
-          <ul>
+          <ul className='pack'>
             {order.lineItems.map(lineItem => (
-              <li key={lineItem.productName}>
+              <li key={lineItem.productName} className='pack'>
                 <b>{lineItem.productName}</b>:
-                <ul>
+                <ul className='pack'>
                   {lineItem.items.map(item => (
-                    <li key={item}>{item}</li>
+                    <li className='pack'key={item}>{item}</li>
                   ))}
                 </ul>
               </li>
