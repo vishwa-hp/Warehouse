@@ -6,9 +6,24 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Read orders data from JSON file
-const orders = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'orders.json'), 'utf8'));
+let orders = [];
+try {
+    orders = JSON.parse(fs.readFileSync(path.join(__dirname, 'orders.json'), 'utf8'));
+    console.log('Orders data:', orders);
+} catch (error) {
+    console.error('Error reading or parsing orders data:', error);
+}
+
 // Read products data from JSON file
-const products = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'ordersMap.json'), 'utf8'));
+let products = {};
+try {
+    products = JSON.parse(fs.readFileSync(path.join(__dirname, 'productsMap.json'), 'utf8'));
+    console.log('Products data:', products);
+} catch (error) {
+    console.error('Error reading or parsing products data:', error);
+}
+
+
 
 // Function to get the picking list
 const getPickingList = () => {
@@ -74,13 +89,17 @@ const getPackingList = () => {
 // Endpoint to get picking list
 app.get('/api/get-picking-list', (req, res) => {
     const pickingList = getPickingList();
-    res.json(pickingList);
+  
+    res.set('Content-Type', 'application/json');
+    res.send(JSON.stringify(pickingList));
 });
 
 // Endpoint to get packing list
-app.get('api/get-packing-list', (req, res) => {
+app.get('/api/get-packing-list', (req, res) => {
     const packingList = getPackingList();
-    res.json(packingList);
+  
+    res.set('Content-Type', 'application/json');
+    res.send(JSON.stringify(packingList));
 });
 
 // Start the server
